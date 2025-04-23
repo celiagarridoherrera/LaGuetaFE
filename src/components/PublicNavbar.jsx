@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import beerDefault from "../assets/images/beerDefault.svg";
-import beerActive from "../assets/images/beerActive.svg";
+import beerDefault from "../assets/icons/beerDefault.svg";
+import beerActive from "../assets/icons/beerActive.svg";
 
-export default NavbarPublic = () => {
+export const NavbarPublic = () => {
     const navLinkStyle = ({ isActive }) => 
         isActive 
             ? "text-text1-public font-UncialAntiqua text-2xl hover:text2-public"
