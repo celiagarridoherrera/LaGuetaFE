@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <footer className="bg-color1-public text-text2-public py-4 mt-auto font-primary text-sm text-center">
+        <footer className="bg-color1-public text-text2-public py-8 mt-auto font-primary text-sm text-center">
             <p>© 2025 La Gueta.</p>
             <p>Todos los derechos reservados.</p>
         </footer>
