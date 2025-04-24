@@ -5,8 +5,10 @@ import {Footer} from "../components/Footer";
 export const PublicLayout = () => {
     return (
         <div className="flex flex-col min-h-screen">
+            <header className="relative z-10">
           <PublicNavbar />
-            <main className="flex-grow">
+            </header>
+            <main className="flex-grow relative z-0 bg-bg-public">
                 <Outlet />
             </main>
             <Footer />

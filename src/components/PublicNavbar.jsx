@@ -8,7 +8,7 @@ export const PublicNavbar = () => {
     return (
         <header className="bg-color1-public">
         <nav className="flex justify-between items-center px-10 py-5">
-                <NavLink to="/" className={"-mb-28"}>
+                <NavLink to="/" className={"-mb-28 ml-7"}>
                 <img src="/src/assets/images/laguetalogoPublic.svg" alt="Logo Naranja" className="h-42"/>
                 </NavLink>
 
