@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -24,11 +24,11 @@ export default {
         'color2-admin': '#01BC01',
         'text-review': '#003FBC',
 
-        // Gradiente para cards-products -> bg-gradient-to-r from-cardproducts-start to-cardproducts-end
+        // Gradiente para cards-products
         'cardproducts-start': '#FFFFFF',
         'cardproducts-end': '#999999',
       },
     },
   },
   plugins: [],
-};
+}
