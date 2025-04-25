@@ -1,4 +1,4 @@
-import { use } from "react"
+import { useEffect } from "react"
 
 export const GalleryPage = () => {
 /*     const [images, setImages] = useState([])
