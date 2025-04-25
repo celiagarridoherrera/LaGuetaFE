@@ -10,16 +10,16 @@ export const AdminNavbar = () => {
                 </NavLink>
 
                 <div className="flex gap-24 mr-8 items-center">
-                <NavLink to="/productos-admin" className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/productos-admin" className="text-color2-admin font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     PRODUCTOS
                 </NavLink>
-                <NavLink to="/galeria-admin" className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/galeria-admin" className="text-color2-admin font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     GALERÍA
                 </NavLink>
-                <NavLink to="/opiniones-admin" className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/opiniones-admin" className="text-color2-admin font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     OPINIONES
                 </NavLink>
-                <NavLink to="/cerrar-sesion" className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/cerrar-sesion" className="text-color2-admin font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     CERRAR SESIÓN
                 </NavLink>
             </div>

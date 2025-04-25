@@ -9,26 +9,25 @@ export const PublicNavbar = () => {
         <header className="bg-color1-public">
         <nav className="flex justify-between items-center px-10 py-5">
                 <NavLink to="/" className={"-mb-28 ml-7"}>
-                <img src="/src/assets/images/laguetalogoPublic.svg" alt="Logo Naranja" className="h-42"/>
+                <img src="/src/assets/images/laguetalogoPublic.svg" alt="Logo Naranja"/>
                 </NavLink>
 
                 <div className="flex gap-24 items-center">
-                <NavLink to="/carta" className="text-text1-public font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/carta" className="text-text1-public font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     CARTA
                 </NavLink>
-                <NavLink to="/galeria" className="text-text1-public font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/galeria" className="text-text1-public font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     GALERÍA
                 </NavLink>
-                <NavLink to="/opiniones" className="text-text1-public font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/opiniones" className="text-text1-public font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     OPINIONES
                 </NavLink>
-                <NavLink to="/contacto" className="text-text1-public font-primary text-2xl hover:text-text2-public">
+                <NavLink to="/contacto" className="text-text1-public font-primary sm:text-[1.125rem] lg:text-[1.5rem] hover:text-text2-public">
                     CONTACTO
                 </NavLink>
                 <NavLink to="/login"
                   onMouseEnter={() => setHovered(true)}
-                  onMouseLeave={() => setHovered(false)}
-                  className="text-text1-public font-primary text-2xl">
+                  onMouseLeave={() => setHovered(false)}>
                   <img src={hovered ? beerActive : beerDefault} alt="Login" className="w-12 h-12 transition-all duration-200"/>
                 </NavLink>
             </div>
