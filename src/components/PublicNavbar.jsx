@@ -12,7 +12,7 @@ export const PublicNavbar = () => {
 
   return (
     <header className="bg-color1-public w-full z-50 relative">
-      <nav className="flex justify-between items-center px-6 py-4">
+      <div className="flex justify-between items-center px-4 md:px-8 py-4 w-full">
         <NavLink to="/" className="-mb-20 z-50">
           <img
             src="/src/assets/images/laguetalogoPublic.svg"
@@ -44,30 +44,34 @@ export const PublicNavbar = () => {
           <NavLink to="/contacto" className="text-text1-public font-primary text-[1.5rem] hover:text-text2-public">
             CONTACTO
           </NavLink>
-          <NavLink to="/login"
+          <NavLink
+            to="/login"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
             <img src={hovered ? beerActive : beerDefault} alt="Login" className="w-10 h-10 transition-all duration-200"/>
           </NavLink>
         </div>
-      </nav>
+      </div>
 
+      {/* DROPDOWN EN MOVIL */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-color1-public flex flex-col items-center gap-4 py-6 md:hidden z-40">
-          <NavLink to="/carta" className="text-text1-public font-primary text-[1.125] hover:text-text2-public">
+        <div className="absolute top-full left-0 w-full bg-color1-public flex flex-col items-center gap-8 py-10 z-40 transition-all duration-300">
+          <NavLink to="/carta" onClick={toggleMenu} className="text-text1-public font-primary text-2xl hover:text-text2-public">
             CARTA
           </NavLink>
-          <NavLink to="/galeria" className="text-text1-public font-primary text-[1.125] hover:text-text2-public">
+          <NavLink to="/galeria" onClick={toggleMenu} className="text-text1-public font-primary text-2xl hover:text-text2-public">
             GALERÍA
           </NavLink>
-          <NavLink to="/opiniones" className="text-text1-public font-primary text-[1.125] hover:text-text2-public">
+          <NavLink to="/opiniones" onClick={toggleMenu} className="text-text1-public font-primary text-2xl hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/contacto" className="text-text1-public font-primary text-[1.125] hover:text-text2-public">
+          <NavLink to="/contacto" onClick={toggleMenu} className="text-text1-public font-primary text-2xl hover:text-text2-public">
             CONTACTO
           </NavLink>
-          <NavLink to="/login"
+          <NavLink
+            to="/login"
+            onClick={toggleMenu}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >

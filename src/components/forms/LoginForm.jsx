@@ -43,7 +43,7 @@ export const LoginForm = ({ onSubmit }) => {
 
             <button
                 type="submit"
-                className="w-[60%] mx-auto block bg-buttons-public text-white font-primary text-[1.5rem] py-3 rounded-xl hover:bg-text2-public hover:text-buttons-public transition duration-300"
+                className="w-[60%] mx-auto block bg-buttons-public text-white font-primary  sm:text-[1.125rem] lg:text-[1.5rem] py-3 rounded-xl hover:bg-text2-public hover:text-buttons-public transition duration-300"
             >
                 Acceder
             </button>

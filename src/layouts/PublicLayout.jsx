@@ -8,8 +8,8 @@ export const PublicLayout = () => {
             <header className="relative z-10">
           <PublicNavbar />
             </header>
-            <main className="flex-grow relative z-0 bg-bg-public">
-                <Outlet />
+            <main className="flex-grow bg-bg-public flex flex-col items-center justify-start">
+              <Outlet />
             </main>
             <Footer />
         </div>

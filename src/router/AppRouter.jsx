@@ -6,6 +6,7 @@ import { GalleryPage } from "../pages/public/GalleryPage";
 import { ReviewsPage } from "../pages/public/ReviewsPage";
 import { ContactPage } from "../pages/public/ContactPage";
 import { LoginPage } from "../pages/public/LoginPage";
+import { CategoryPage } from "../pages/public/CategoryPage";
 
 import { AdminRoute } from "./AdminRoute";
 import { AdminLayout } from "../layouts/AdminLayout";
@@ -21,6 +22,7 @@ export const AppRouter = () => {
         <Route path="/" element={<PublicLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/carta" element={<MenuPage />} />
+            <Route path="/carta/:categoryName" element={<CategoryPage />} />
           <Route path="/galeria" element={<GalleryPage />} />
           <Route path="/opiniones" element={<ReviewsPage />} />
           <Route path="/contacto" element={<ContactPage />} />

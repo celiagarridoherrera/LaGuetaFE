@@ -11,7 +11,7 @@ export const GalleryPage = () => {
     //ENLACE CON EL BACKEND PARA CARGAR LAS IMÁGENES
 
     return (
-        <div className="w-full px-6 py-10">
+        <div className="w-full px-6 py-20">
             <h1 className="text-center text-color1-public font-primary sm:text-[1.875rem] lg:text-[3rem] mb-10">
                 NUESTRO ESCAPARATE
             </h1>
