@@ -11,6 +11,8 @@ import { AdminRoute } from "./AdminRoute";
 import { AdminLayout } from "../layouts/AdminLayout";
 import { DashboardAdmin } from "../pages/admin/DashboardAdmin";
 import { ProductsAdmin } from "../pages/admin/ProductsAdmin";
+import { GalleryAdmin } from "../pages/admin/GalleryAdmin";
+import { ReviewsAdmin } from "../pages/admin/ReviewsAdmin";
 
 export const AppRouter = () => {
   return (
@@ -32,6 +34,8 @@ export const AppRouter = () => {
         }>
           <Route index element={<DashboardAdmin />} />
           <Route path="productos-admin" element={<ProductsAdmin />} />
+          <Route path="galeria-admin" element={<GalleryAdmin />} />
+          <Route path="opiniones-admin" element={<ReviewsAdmin />} />
         </Route>
       </Routes>
     </BrowserRouter>
