@@ -28,7 +28,7 @@ export const CategoryPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#FFA726] flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center w-full">
       <h1 className="font-primary uppercase sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-black mb-10 text-center">
         {categoryName}
       </h1>
@@ -67,7 +67,7 @@ export const CategoryPage = () => {
 
       {/* Botón de volver */}
       <Link to="/carta">
-        <button className="mt-10 bg-black text-[#FFA726] px-8 py-3 rounded-full font-primary hover:bg-[#FFA726] hover:text-black transition text-lg">
+        <button className="mt-10 bg-black text-text1-public px-8 py-3 rounded-full font-primary hover:bg-text2-public hover:text-text1-public transition text-lg">
           Volver a la carta
         </button>
       </Link>

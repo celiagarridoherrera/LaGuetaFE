@@ -7,7 +7,7 @@ export const AdminLayout = () => {
             <header className="relative z-10">
           <AdminNavbar />
             </header>
-            <main className="flex-grow relative z-0 bg-bg-text-admin">
+            <main className="flex-grow bg-bg-text-admin flex flex-col items-center justify-start pt-24 px-4">
                 <Outlet />
             </main>
         </div>

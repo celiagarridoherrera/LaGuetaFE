@@ -14,17 +14,17 @@ export const ContactPage = () => {
             <h2 className="w-full text-center text-color1-public sm:text-[1.875rem] lg:text-[3rem] font-primary p-5 mt-14 mb-10">
                 ¡ENcuentranos por aquí!
             </h2>
-            <div className="flex justify-between items-center w-full max-w-[800px] mx-auto mb-10 gap-x-36">
-                <a href="https://www.instagram.com/laguetacandas/" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/icons/instagram.svg" alt="Instagram" className="w-48 h-48 transition-transform duration-300 hover:scale-110"/>
-                </a>
-                <a href="https://www.facebook.com/la.gueta.1/?locale=es_ES" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/icons/facebook.svg" alt="Facebook" className="w-48 h-48 transition-transform duration-300 hover:scale-110"/>
-                </a>
-                <a href="https://g.co/kgs/HR5tok8" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/icons/maps.svg" alt="Google Maps" className="w-48 h-48 transition-transform duration-300 hover:scale-110"/>
-                </a>
-            </div>
+            <div className="flex flex-col sm:flex-row justify-center items-center w-full max-w-[800px] mx-auto mb-10 gap-10 sm:gap-x-36">
+              <a href="https://www.instagram.com/laguetacandas/" target="_blank" rel="noopener noreferrer">
+                <img src="/src/assets/icons/instagram.svg" alt="Instagram" className="w-24 h-24 sm:w-48 sm:h-48 transition-transform duration-300 hover:scale-110"/>
+              </a>
+              <a href="https://www.facebook.com/la.gueta.1/?locale=es_ES" target="_blank" rel="noopener noreferrer">
+                <img src="/src/assets/icons/facebook.svg" alt="Facebook" className="w-24 h-24 sm:w-48 sm:h-48 transition-transform duration-300 hover:scale-110"/>
+              </a>
+              <a href="https://g.co/kgs/HR5tok8" target="_blank" rel="noopener noreferrer">
+                <img src="/src/assets/icons/maps.svg" alt="Google Maps" className="w-24 h-24 sm:w-48 sm:h-48 transition-transform duration-300 hover:scale-110"/>
+              </a>
+            </div>               
         </div>
     )
 }
