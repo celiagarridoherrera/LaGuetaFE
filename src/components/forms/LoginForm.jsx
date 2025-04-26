@@ -24,7 +24,7 @@ export const LoginForm = ({ onSubmit }) => {
                 placeholder="Nombre de usuario"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="font-secondary text-lg sm:text-xl mb-8 p-4 border border-gray-300 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-color1-public text-black"
+                className="font-secondary sm:text-[0.875rem] lg:text-[1rem] mb-8 p-4 border border-gray-300 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-color1-public text-black"
                 required
                 autoFocus
             />
@@ -37,7 +37,7 @@ export const LoginForm = ({ onSubmit }) => {
                 placeholder="Tu contraseña"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="font-secondary text-lg sm:text-xl mb-8 p-4 border border-gray-300 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-color1-public text-black"
+                className="font-secondary sm:text-[0.875rem] lg:text-[1rem] mb-8 p-4 border border-gray-300 rounded-xl w-full focus:outline-none focus:ring-2 focus:ring-color1-public text-black"
                 required
             />
 
