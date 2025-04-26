@@ -1,7 +1,11 @@
 import { AddButton } from "../../components/buttons/AddButton"
 import { ProductCard } from "../../components/cards/ProductCard"
+import { NewProductModal } from "../../components/modals/NewProductModal"
+import { useState } from "react"
 
 export const ProductsAdmin = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const products = [
         { id: 1, title: 'Cinzano 1757', category: 'Vermú', imageUrl: '/ruta/cinzano.jpg' },
         { id: 2, title: 'Martini', category: 'Vermú', imageUrl: '/ruta/cinzano.jpg' },
@@ -21,7 +25,7 @@ export const ProductsAdmin = () => {
     return (
         <div className="min-h-screen p-4">
             <div className="flex w-full justify-end mb-8">
-            <AddButton />
+            <AddButton onClick={() => setIsModalOpen(true)}/>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
             {products.map((product, index) => (
@@ -36,6 +40,9 @@ export const ProductsAdmin = () => {
               </div>
             ))}
             </div>
+            {isModalOpen && (
+                <NewProductModal onClose={() => setIsModalOpen(false)} />
+            )}
         </div>
     )
 }
