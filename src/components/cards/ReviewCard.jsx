@@ -1,6 +1,6 @@
 import { FaStar } from 'react-icons/fa';
 
-export const ReviewCard = ({ name, comment, rating, date }) => {
+export const ReviewCard = ({ name, comment, rating, date, children }) => {
     return (
         <div className="bg-card-reviews text-text-review rounded-lg shadow-md p-8 max-w-md w-full mx-auto">
             <div className="flex justify-between items-center mb-4">
@@ -19,6 +19,7 @@ export const ReviewCard = ({ name, comment, rating, date }) => {
             </div>
 
             <p className="text-text-review font-secondary">{comment}</p>
+            {children}
         </div>
     )
 }
