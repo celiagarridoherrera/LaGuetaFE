@@ -10,7 +10,7 @@ export const AdminNavbar = () => {
   return (
     <header className="bg-color1-admin w-full z-50 relative">
       <nav className="flex justify-between items-center px-6 py-4">
-        <NavLink to="/" className="-mb-20 z-50">
+        <NavLink to="/admin" className="-mb-20 z-50">
           <img
             src="/src/assets/images/laguetalogoAdmin.svg"
             alt="Logo Verde"
@@ -29,16 +29,16 @@ export const AdminNavbar = () => {
         </div>
 
         <div className="hidden lg:flex gap-16 items-center">
-        <NavLink to="/carta-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+        <NavLink to="/admin/productos-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             PRODUCTOS
           </NavLink>
-          <NavLink to="/galeria-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/galeria-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             GALERÍA
           </NavLink>
-          <NavLink to="/opiniones-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/opiniones-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/cerrar-sesión" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/cerrar-sesión" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             CERRAR SESIÓN
           </NavLink>
         </div>
@@ -46,16 +46,16 @@ export const AdminNavbar = () => {
 
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-color1-admin flex flex-col items-center gap-4 py-6 md:hidden z-40">
-          <NavLink to="/carta-admin" className="text-color2-admin font-primary text-[1.125rem] hover:text-text2-public">
+          <NavLink to="/admin/productos-admin" className="text-color2-admin font-primary text-[1.125rem] hover:text-text2-public">
             PRODUCTOS
           </NavLink>
-          <NavLink to="/galeria-admin" className="text-color2-admin  font-primary text-[1.125rem] hover:text-text2-public">
+          <NavLink to="/admin/galeria-admin" className="text-color2-admin  font-primary text-[1.125rem] hover:text-text2-public">
             GALERÍA
           </NavLink>
-          <NavLink to="/opiniones-admin" className="text-color2-admin  font-primary text-[1.125rem] hover:text-text2-public">
+          <NavLink to="/admin/opiniones-admin" className="text-color2-admin  font-primary text-[1.125rem] hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/cerrar-sesión" className="text-color2-admin font-primary text-[1.125rem] hover:text-text2-public">
+          <NavLink to="/admin/cerrar-sesión" className="text-color2-admin font-primary text-[1.125rem] hover:text-text2-public">
             CERRAR SESIÓN
           </NavLink>
         </div>

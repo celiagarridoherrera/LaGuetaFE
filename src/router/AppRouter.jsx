@@ -10,6 +10,7 @@ import { LoginPage } from "../pages/public/LoginPage";
 import { AdminRoute } from "./AdminRoute";
 import { AdminLayout } from "../layouts/AdminLayout";
 import { DashboardAdmin } from "../pages/admin/DashboardAdmin";
+import { ProductsAdmin } from "../pages/admin/ProductsAdmin";
 
 export const AppRouter = () => {
   return (
@@ -30,6 +31,7 @@ export const AppRouter = () => {
           </AdminRoute>
         }>
           <Route index element={<DashboardAdmin />} />
+          <Route path="productos-admin" element={<ProductsAdmin />} />
         </Route>
       </Routes>
     </BrowserRouter>
