@@ -23,7 +23,7 @@ export const ProductsAdmin = () => {
         };
 
     return (
-        <div className="min-h-screen p-4">
+        <div className="p-4">
             <div className="flex w-full justify-end mb-8">
             <AddButton onClick={() => setIsModalOpen(true)}/>
             </div>

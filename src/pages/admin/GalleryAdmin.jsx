@@ -18,24 +18,22 @@ export const GalleryAdmin = () => {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen p-4">
+        <div className="flex flex-col items-center p-4">
             <div className="flex w-full justify-end mb-8">
             <AddButton onClick={() => setIsModalOpen(true)}/>
             </div>
-            <div className="grid gap-8 w-full"
-                 style={{
-                   gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
                 {images.map((image) => (
-                <div key={image.id} className="relative">
-                    <img
-                      src={image.url}
-                      alt={`Imagen ${image.id}`}
-                      className="w-full h-[300px] object-cover rounded"
-                    />
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                        <DeleteButton onClick={() => handleDelete(image.id)} />
+                    <div key={image.id} className="relative">
+                        <img
+                            src={image.url}
+                            alt={`Imagen ${image.id}`}
+                            className="w-full h-[300px] object-cover rounded"
+                        />
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                            <DeleteButton onClick={() => handleDelete(image.id)} />
+                        </div>
                     </div>
-                </div>
                 ))}
             </div>
              {isModalOpen && (

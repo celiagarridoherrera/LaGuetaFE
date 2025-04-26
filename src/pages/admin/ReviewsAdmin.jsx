@@ -24,7 +24,7 @@ export const ReviewsAdmin = () => {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen p-4">
+        <div className="flex flex-col items-center p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-6xl">
                 {reviews.map((review) => (
                     <ReviewCard

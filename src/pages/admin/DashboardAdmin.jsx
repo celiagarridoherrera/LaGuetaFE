@@ -2,7 +2,7 @@ import DashImage from '../../assets/images/dashboard-image.jpg'
 
 export const DashboardAdmin = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <div className="flex flex-col items-center justify-center p-4">
             <h1 className="text-center sm:text-[1.875rem] lg:text-[3rem] font-primary font-bold text-color1-admin mb-2">
                 ¡Hola jefe! Bienvenido al panel de La Gueta
             </h1>
