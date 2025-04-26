@@ -1,13 +1,17 @@
 import { AddButton } from "../../components/buttons/AddButton";
 import { DeleteButton } from "../../components/buttons/DeleteButton";
+import { NewImageModal } from "../../components/modals/NewImageModal";
+import { useState } from "react";
 
 export const GalleryAdmin = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const images = [
         {id: 1, url: "/src/assets/images/jacobo.JPEG" },
         {id: 2, url: "/src/assets/images/cali.JPEG" },
         {id: 3, url: "/src/assets/images/sardina.JPEG" },
         {id: 4, url: "/src/assets/images/cali2.JPEG" },,
-    ]; // Simulando un array de imágenes
+    ];
 
     const handleDelete = (id) => {
         console.log("Eliminar imagen con id:", id );
@@ -16,7 +20,7 @@ export const GalleryAdmin = () => {
     return (
         <div className="flex flex-col items-center min-h-screen p-4">
             <div className="flex w-full justify-end mb-8">
-            <AddButton />
+            <AddButton onClick={() => setIsModalOpen(true)}/>
             </div>
             <div className="grid gap-8 w-full"
                  style={{
@@ -34,6 +38,8 @@ export const GalleryAdmin = () => {
                 </div>
                 ))}
             </div>
+             {isModalOpen && (
+                <NewImageModal onClose={() => setIsModalOpen(false)} />)}
         </div>
     )
 };
