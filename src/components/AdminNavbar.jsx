@@ -10,7 +10,7 @@ export const AdminNavbar = () => {
   return (
     <header className="bg-color1-admin w-full z-50 relative">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 w-full">
-        <NavLink to="/" className="-mb-20 z-50">
+        <NavLink to="/admin" className="-mb-20 z-50">
           <img
             src="/src/assets/images/laguetalogoAdmin.svg"
             alt="Logo Verde"
@@ -29,16 +29,16 @@ export const AdminNavbar = () => {
         </div>
 
         <div className="hidden lg:flex gap-16 items-center">
-          <NavLink to="/carta-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+        <NavLink to="/admin/productos-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             PRODUCTOS
           </NavLink>
-          <NavLink to="/galeria-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/galeria-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             GALERÍA
           </NavLink>
-          <NavLink to="/opiniones-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/opiniones-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/cerrar-sesion" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/cerrar-sesión" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             CERRAR SESIÓN
           </NavLink>
         </div>
@@ -46,16 +46,16 @@ export const AdminNavbar = () => {
 
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-color1-admin flex flex-col items-center gap-8 py-10 z-40 transition-all duration-300">
-          <NavLink to="/carta-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+          <NavLink to="/admin/productos-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
             PRODUCTOS
           </NavLink>
-          <NavLink to="/galeria-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+          <NavLink to="/admin/galeria-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
             GALERÍA
           </NavLink>
-          <NavLink to="/opiniones-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+          <NavLink to="/admin/opiniones-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/cerrar-sesion" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+          <NavLink to="/admin/cerrar-sesion" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
             CERRAR SESIÓN
           </NavLink>
         </div>
