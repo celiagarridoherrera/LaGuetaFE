@@ -10,12 +10,12 @@ export const GalleryAdmin = () => {
 
   const handleDelete = async (id) => {
     await deleteImage(id);
-    refreshGallery(); // refrescar después de borrar
+    refreshGallery();
   };
 
   const handleImageUploaded = () => {
     setIsModalOpen(false);
-    refreshGallery(); // refrescar después de añadir
+    refreshGallery();
   };
 
   if (loading) {
