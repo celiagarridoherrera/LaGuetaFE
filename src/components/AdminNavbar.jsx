@@ -1,11 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { HiX, HiMenu } from "react-icons/hi";
+import { useAuth } from "../context/AuthContext";
 
 export const AdminNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { logoutUser } = useAuth();
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const handleLogout = () => {
+    logoutUser();
+    navigate("/login");
+  };
 
   return (
     <header className="bg-color1-admin w-full z-50 relative">
@@ -29,7 +37,7 @@ export const AdminNavbar = () => {
         </div>
 
         <div className="hidden lg:flex gap-16 items-center">
-        <NavLink to="/admin/productos-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          <NavLink to="/admin/productos-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             PRODUCTOS
           </NavLink>
           <NavLink to="/admin/galeria-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
@@ -38,9 +46,13 @@ export const AdminNavbar = () => {
           <NavLink to="/admin/opiniones-admin" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/admin/cerrar-sesión" className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public">
+          {/* Botón Cerrar Sesión */}
+          <button
+            onClick={handleLogout}
+            className="text-color2-admin font-primary text-[1.5rem] hover:text-text2-public"
+          >
             CERRAR SESIÓN
-          </NavLink>
+          </button>
         </div>
       </div>
 
@@ -55,9 +67,16 @@ export const AdminNavbar = () => {
           <NavLink to="/admin/opiniones-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
             OPINIONES
           </NavLink>
-          <NavLink to="/admin/cerrar-sesion" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
+          {/* Botón Cerrar Sesión también en el menú móvil */}
+          <button
+            onClick={() => {
+              toggleMenu();
+              handleLogout();
+            }}
+            className="text-color2-admin font-primary text-2xl hover:text-text2-public"
+          >
             CERRAR SESIÓN
-          </NavLink>
+          </button>
         </div>
       )}
     </header>
