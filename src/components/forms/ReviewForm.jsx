@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { FaStar } from 'react-icons/fa'
+import React, { useState } from 'react';
+import { FaStar } from 'react-icons/fa';
 
 
 export const ReviewForm = ({ onSubmit }) => {
@@ -8,12 +8,17 @@ export const ReviewForm = ({ onSubmit }) => {
     const [rating, setRating] = useState(0);
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        onSubmit?.({ name, comment, rating })
-        setName("")
-        setComment("")
-        setRating(0)
-    }
+        e.preventDefault();
+        if (!name || !comment || rating === 0) {
+            toast.error("Por favor, completa todos los campos y selecciona una puntuación.");
+            return;
+        }
+        
+        onSubmit?.({ name, comment, rating });
+        setName("");
+        setComment("");
+        setRating(0);
+    };
 
     return (
         <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-16 bg-form-public text-text1-public rounded-lg shadow-md">
@@ -22,7 +27,7 @@ export const ReviewForm = ({ onSubmit }) => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-color1-public text-color1-public"
+                className="w-full p-2 mb-4 border font-secondary border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-color1-public text-color1-public"
                 placeholder="Escribe tu nombre"
                 required
             />
@@ -31,7 +36,7 @@ export const ReviewForm = ({ onSubmit }) => {
             <textarea
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                className="w-full p-2 mb-4 border border-gray-300 font-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-color1-public  text-color1-public"
+                className="w-full p-2 mb-4 border border-gray-300 font-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-color1-public text-color1-public"
                 placeholder="Escribe tu comentario"
                 rows="4"
                 required
@@ -45,7 +50,7 @@ export const ReviewForm = ({ onSubmit }) => {
                         onClick={() => setRating(star)}
                         className="text-4xl text-text2-public font-secondary hover:scale-110 transition-transform"
                     >
-                    <FaStar color={star <= rating ? "#facc15" : "#ccc"} />
+                        <FaStar color={star <= rating ? "#facc15" : "#ccc"} />
                     </button>
                 ))}
             </div>
@@ -57,5 +62,5 @@ export const ReviewForm = ({ onSubmit }) => {
                 Enviar
             </button>
         </form>
-    )
-}
+    );
+};
