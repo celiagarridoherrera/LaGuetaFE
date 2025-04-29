@@ -23,7 +23,6 @@ export const createProduct = async (productData) => {
     )
   );
 
-  // 🔥 SOLO añadir el archivo si existe
   if (productData.image) {
     formData.append("file", productData.image);
   }

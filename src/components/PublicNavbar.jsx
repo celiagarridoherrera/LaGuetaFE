@@ -53,8 +53,6 @@ export const PublicNavbar = () => {
           </NavLink>
         </div>
       </div>
-
-      {/* DROPDOWN EN MOVIL */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-color1-public flex flex-col items-center gap-8 py-10 z-40 transition-all duration-300">
           <NavLink to="/carta" onClick={toggleMenu} className="text-text1-public font-primary text-2xl hover:text-text2-public">

@@ -67,7 +67,6 @@ export const AdminNavbar = () => {
           <NavLink to="/admin/opiniones-admin" onClick={toggleMenu} className="text-color2-admin font-primary text-2xl hover:text-text2-public">
             OPINIONES
           </NavLink>
-          {/* Botón Cerrar Sesión también en el menú móvil */}
           <button
             onClick={() => {
               toggleMenu();

@@ -1,4 +1,3 @@
-// EditProductModal.jsx
 import { useState, useEffect } from "react";
 import { FaTimes, FaUpload } from "react-icons/fa";
 
