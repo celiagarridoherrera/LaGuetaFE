@@ -17,7 +17,6 @@ export const LoginPage = () => {
         toast.success("¡Bienvenido, JacoboRaboso! 🎉");
         navigate('/admin');
       } else {
-        setError('Credenciales incorrectas');
         toast.error("Credenciales incorrectas ❌");
       }
     } catch (err) {

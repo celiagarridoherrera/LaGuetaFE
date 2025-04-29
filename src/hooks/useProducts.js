@@ -19,12 +19,14 @@ export const useProducts = () => {
   const addProduct = async (newProductData) => {
     try {
       const createdProduct = await createProduct(newProductData);
+      await fetchProducts();
       return createdProduct;
     } catch (error) {
       console.error("Error creating product:", error);
       throw error;
     }
   };
+  
 
   const editProduct = async (id, updatedProduct) => {
     const updated = await updateProduct(id, updatedProduct);

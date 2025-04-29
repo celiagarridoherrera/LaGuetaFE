@@ -18,7 +18,7 @@ export const GalleryPage = () => {
       </h1>
 
       {images.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl px-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl px-4 w-full mb-10">
           {images.map((image) => (
             <div key={image.id} className="flex justify-center">
               <img

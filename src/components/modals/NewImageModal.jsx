@@ -21,10 +21,8 @@ export const NewImageModal = ({ onClose, onUploadSuccess }) => {
           }
         });
   
-        // Asegúrate de obtener la URL o ID correcto de la respuesta
-        const uploadedImageUrl = response.data;  // O usa 'response.data.imageUrl' según lo que devuelva el backend
+        const uploadedImageUrl = response.data;
   
-        // Llamada a onUploadSuccess para actualizar la galería
         if (onUploadSuccess) {
           onUploadSuccess(uploadedImageUrl);
         }
@@ -65,11 +63,6 @@ export const NewImageModal = ({ onClose, onUploadSuccess }) => {
               <FaUpload className="ml-2 text-lg text-black" />
             </div>
           </div>
-
-          <p className="text-center text-xs font-secondary text-bg-text-admin">
-            Puedes asociar una imagen a un producto ya existente que no tenga imagen
-          </p>
-
           <div className="flex justify-center">
             <ActionButton text="Subir producto" />
           </div>
